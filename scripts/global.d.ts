@@ -12,8 +12,7 @@ interface IReport {
 }
 
 interface IModuleResolver {
-    module: string;
+    moduleName: string;
     resolve: (report: IReport) => boolean;
-    initialArg?: any;
-    initialArgs?: any[];
+    resolveArgs?: (report: IReport) => any[];
 }

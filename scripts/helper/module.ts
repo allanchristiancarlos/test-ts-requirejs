@@ -1,4 +1,5 @@
 import { RESOLVERS } from './resolvers';
+import { LoggerHelper } from './logger';
 
 export module ModuleHelper {
 
@@ -32,16 +33,22 @@ export module ModuleHelper {
             const isResolved = resolver.resolve(report);
 
             if (isResolved) {
+                let args;
+
+                if (resolver.resolveArgs) {
+                    args = resolver.resolveArgs(report);
+                }
+
                 loadModule(
-                    resolver.module, 
-                    resolver.initialArg || resolver.initialArgs || null, 
+                    resolver.moduleName, 
+                    args, 
                     fn
                 );
                 return;
             }
         }
 
-        throw new Error(`Report don't have module yet.`);
+        LoggerHelper.error(`Report can't be resolved. Please check if it has module first.`);
     }
 
     function isModuleLoaded(moduleName: string): boolean {

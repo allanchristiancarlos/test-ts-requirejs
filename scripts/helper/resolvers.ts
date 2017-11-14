@@ -1,9 +1,20 @@
 export const RESOLVERS: Array<IModuleResolver> = [
     {
-        module: 'TileModule',
+        moduleName: 'TileModule',
         resolve: (report) => {
             return report.Type === 100;
         },
-        initialArg: 'https://dealercenter.net'
+        resolveArgs: (report) => {
+            return ['https://dealercenter.net', '1'];
+        }
+    },
+    {
+        moduleName: 'LineModule',
+        resolve: (report) => {
+            return report.Type === 1;
+        },
+        resolveArgs: () => {
+            return [1];
+        }
     }
 ];

@@ -1,6 +1,7 @@
 {
     "typescript.tsdk": "node_modules/typescript/lib",
     "files.exclude": {
-        "scripts/**/*.js": true
+        "scripts/**/*.js": true,
+        "scripts/**/*.js.map": true
     }
 }

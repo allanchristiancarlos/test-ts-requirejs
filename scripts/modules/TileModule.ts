@@ -1,11 +1,11 @@
-import { BaseModule } from "./BaseModule";
+import { LineModule } from "modules/LineModule";
 
-export class TileModule extends BaseModule {
+export class TileModule extends LineModule {
     constructor(
         private _iframeURL: string,
-        private _test: string
+        private _test: number
     ) {
-        super();
+        super(_test);
 
         setTimeout(() => {
             this.test();
