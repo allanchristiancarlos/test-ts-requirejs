@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./", //Same as require.config
+        "module": "amd",
+        "noImplicitAny": false,
+        "target": "es5", // or whatever you want
+        "watch": true,
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "experimentalDecorators": true
+    }
+}

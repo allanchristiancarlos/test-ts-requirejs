@@ -1,0 +1,21 @@
+{
+  "name": "test-require",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server",
+    "dev": "tsc --p scripts/tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "requirejs": "^2.3.5"
+  },
+  "devDependencies": {
+    "@types/requirejs": "^2.1.31",
+    "http-server": "^0.10.0",
+    "typescript": "^2.6.1"
+  }
+}
