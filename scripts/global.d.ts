@@ -10,3 +10,10 @@ interface IReport {
     Id: number;
     CustomURL: string;
 }
+
+interface IModuleResolver {
+    module: string;
+    resolve: (report: IReport) => boolean;
+    initialArg?: any;
+    initialArgs?: any[];
+}
